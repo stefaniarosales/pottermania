@@ -3,7 +3,8 @@ import { Link, Outlet } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleMenu } from '../../redux/menuSlice';  // Importa la acción de toggle
 
-import {StyledContainerNavbar, StyledContainerLogo, StyledLogo, Styledlinks} from './styledNavbar';
+
+import { StyledContainerNavbar, StyledContainerLogo, StyledLogo, Styledlinks } from './stylednavbar';
 import BurgerButton from '../navbar/burgerbutton/BurgerButton';
 
 function Navbar() {
@@ -20,7 +21,7 @@ function Navbar() {
 
         <BurgerButton isOpen={isOpen} handleToggleMenu={handleToggleMenu} />
         <StyledContainerLogo>
-          <StyledLogo src='public/img/logo/logoNavbar.png' />
+          <StyledLogo src='/img/logo/logoNavbar.png' />
         </StyledContainerLogo>
 
         

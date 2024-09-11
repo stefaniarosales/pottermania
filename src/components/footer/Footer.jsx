@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <StyledContainer>
-        <StyledLogo src='public/img/logo/logoFooter.png'/>
+        <StyledLogo src='/img/logo/logoFooter.png'/>
         <StyledInfo>Creado por Stefania</StyledInfo>
       </StyledContainer>
     </>
