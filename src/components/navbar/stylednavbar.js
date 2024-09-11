@@ -55,7 +55,7 @@ export const Styledlinks = styled.div`
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 110px;
+    top: 100px;
     left: 0;
     right: 0;
     width: 50%;
