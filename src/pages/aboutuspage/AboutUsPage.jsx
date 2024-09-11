@@ -19,7 +19,6 @@ function AboutUsPage() {
     <>
       <StyledContainer>
         <StyledTitle>Bienvenido a la Tienda Mágica de Harry Potter</StyledTitle>
-        {/* <ImageStyled src="https://placehold.co/250x150/2980B9/FFF" alt="Imagen temática de Harry Potter" /> */}
         <StyledContent>
           Somos una tienda online especializada en todo lo relacionado con el mundo mágico de Harry Potter. 
         </StyledContent>

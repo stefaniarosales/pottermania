@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 //styles
-import { StyledSection, StyledSubtitle, StyledParrafo } from './StyledAboutUs'
+import { StyledSection, StyledSubtitle, StyledParrafo, StyledAboutBtn } from './StyledAboutUs'
 
 export default function AboutUs() {
   return (
@@ -14,7 +15,10 @@ export default function AboutUs() {
         <StyledParrafo>
           Nuestro equipo está formado por fanáticos apasionados de Harry Potter que se dedican a brindarle todo lo que necesita para abrazar su lado mágico. Ya sea que sea un Gryffindor de corazón, un Slytherin astuto o un Hufflepuff leal, tenemos algo para todos.
         </StyledParrafo>
-        <StyledSubtitle>¡Descubre la magia de Harry Potter con nosotros!</StyledSubtitle>
+        <Link to='/AboutUsPage'>
+          <StyledAboutBtn>Descubre la Magia</StyledAboutBtn>
+        </Link>
+        
         </StyledSection>
     </>
   )

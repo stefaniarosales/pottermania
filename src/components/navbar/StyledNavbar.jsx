@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledContainerNavbar = styled.nav`
-    height: 90px;
+  height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,6 +41,7 @@ export const Styledlinks = styled.div`
     text-decoration: none;
     color: #333;
     font-size: 1rem;
+    font-weight: bolder;
     padding: 0.5rem;
     transition: color 0.3s ease;
 

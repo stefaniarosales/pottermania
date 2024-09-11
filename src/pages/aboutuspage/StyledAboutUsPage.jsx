@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
 export const StyledContainer = styled.section`
-    
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #131415;
-    padding-top: 100px;
-    padding: 0 2rem;
+    padding: 2rem;
     text-align: center;
 `;
 
