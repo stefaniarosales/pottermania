@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const StyledSection=styled.section`
-    height: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     padding: 20px;
+    padding-top: 70px;
 
     background-image: url(/img/hero/hero.jpeg);
     background-repeat: no-repeat;

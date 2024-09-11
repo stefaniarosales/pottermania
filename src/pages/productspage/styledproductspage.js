@@ -10,6 +10,7 @@ background-color: #131415;
   flex-direction: column;
   justify-content: center;
   padding: 32px;
+  padding-top: 100px;
   align-items: center;
 `;
 

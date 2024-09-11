@@ -8,7 +8,7 @@ export const StyledSection=styled.section`
     justify-content: center;
     gap: 1rem;
     padding: 20px;
-   
+    height: 500px;
 `;
 
 export const StyledSubtitle=styled.h2`
