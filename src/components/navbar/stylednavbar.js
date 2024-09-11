@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 export const StyledContainerNavbar = styled.nav`
   height: 70px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  position: fixed;
+  padding: 1rem;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   /* Para tablet y desktop, muestra siempre el menú */
   @media (min-width: 768px) {
     justify-content: space-between;
@@ -23,6 +24,7 @@ export const StyledContainerLogo = styled.div`
 export const StyledLogo = styled.img`
   width: 70px;
   height: auto;
+  padding-right: 2rem;
 `;
 
 export const Styledlinks = styled.div`
@@ -35,6 +37,7 @@ export const Styledlinks = styled.div`
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    padding-right: 2rem;
   }
 
   a {
