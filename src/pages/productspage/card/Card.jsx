@@ -1,6 +1,5 @@
 import React from "react"
 
-
 //styles
 import { StyledContainer, StyledTitle, StyledImg, StyledPrice } from "./styledcard"
 import { StyledButton } from "../../../components/ui/button/StyledButton"

@@ -7,9 +7,8 @@ export const StyledContainer = styled.div`
     align-items: center;
     margin: 16px;
     padding: 16px;
-    border: 1px solid #eee;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
 `
 
 export const StyledImg = styled.img`
@@ -23,8 +22,11 @@ export const StyledTitle = styled.h3`
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 8px;
+    color: black;
+    text-align: center;
 `
 
 export const StyledPrice = styled.p`
     font-size: 16px;
+    color: black;
 `
