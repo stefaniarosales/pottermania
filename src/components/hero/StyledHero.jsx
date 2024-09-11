@@ -9,7 +9,7 @@ export const StyledSection=styled.section`
     gap: 2rem;
     padding: 20px;
 
-    background-image: url(././public/img/hero/hero.jpeg);
+    background-image: url(./public/img/hero/hero.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
