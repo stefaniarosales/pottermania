@@ -2,6 +2,7 @@ import React from 'react'
 
 import AboutUs from '../aboutus/AboutUs'
 import FeaturedProducts from '../featuredproducts/FeaturedProducts'
+import ContactFormPage from '../../pages/contactpage/ContactFormPage'
 
 //styles
 import { StyledSection, StyledTitle, StyledSubTitle } from '../hero/StyledHero'
@@ -17,6 +18,7 @@ function Hero() {
       </StyledSection>
       <AboutUs/>
       <FeaturedProducts/>
+      <ContactFormPage/>
     </>
   )
 }

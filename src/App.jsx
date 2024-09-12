@@ -9,7 +9,7 @@ import Footer from "./components/footer/Footer"
 
 //pages
 import AboutUsPage from "./pages/aboutuspage/AboutUsPage"
-import ContactPage from "./pages/contactpage/ContactPage"
+import ContactFormPage from "./pages/contactpage/ContactFormPage"
 import ProductsPage from "./pages/productspage/ProductsPage"
 import NoPage from "./pages/nopage/NoPage"
 
@@ -26,7 +26,7 @@ function App() {
         <Route path="/" element={<Hero/>}/>
         <Route path="AboutUsPage" element={<AboutUsPage/>}/>
         <Route path="ProductsPage" element={<ProductsPage/>}/>
-        <Route path="ContactPage" element={<ContactPage/>}/>
+        <Route path="ContactFormPage" element={<ContactFormPage/>}/>
         <Route path="*" element={<NoPage/>}/>
       </Routes>
       <Footer/>

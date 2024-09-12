@@ -31,7 +31,7 @@ function Navbar() {
           <Link to='/'>Home</Link>
           <Link to='AboutUsPage'>About Us</Link>
           <Link to='ProductsPage'>Products</Link>
-          <Link to='ContactPage'>Contact</Link>
+          <Link to='ContactFormPage'>Contact</Link>
         </Styledlinks>
       </StyledContainerNavbar>
       <Outlet />
