@@ -8,7 +8,11 @@ export const ContainerSection = styled.section`
     align-items: center;
     background-color: #131415;
     padding: 2rem;
-    padding-top: 150px;
+
+    background-image: url(/img/hero/hero.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 `
 
 // Contenedor principal del formulario
@@ -17,12 +21,8 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  padding-top: 150px;
-  padding-bottom: 30px;
-  padding-left: 50px;
-  padding-right: 50px;
-  width: 100%;
-  background-color: #131415;
+  padding: 20px;
+  width: 90%;
 `
 
 // Título del formulario
@@ -60,6 +60,7 @@ export const ContenedorEtiquetas=styled.div`
 export const ContainerSubmitButton = styled.div`
   width: 100%;
   text-align: center;
+  padding: 5px;
 
 `
 
@@ -72,6 +73,7 @@ export const Label = styled.label`
 
 // Estilo base para los campos de texto
 export const StyledField = styled.input`
+
   padding: 10px;
   padding-left: 10px;
   font-size: 14px;
@@ -97,15 +99,14 @@ export const ErrorText = styled.div`
 
 // Estilo del botón de enviar
 export const SubmitButton = styled.button`
+  width: 150px;
+  height: 50px;
   padding: 10px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   &:hover {
-    background-color: #0056b3;
+    background-color: #131415;
+    color: white;
   }
   &:disabled {
     background-color: #ccc;
