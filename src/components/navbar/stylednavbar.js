@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledContainerNavbar = styled.nav`
   height: 70px;
   width: 100%;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +25,7 @@ export const StyledContainerLogo = styled.div`
 export const StyledLogo = styled.img`
   width: 70px;
   height: auto;
-  padding-right: 2rem;
+  padding-right: 3rem;
 `;
 
 export const Styledlinks = styled.div`
@@ -37,7 +38,7 @@ export const Styledlinks = styled.div`
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    padding-right: 2rem;
+    padding-right: 3rem;
   }
 
   a {
