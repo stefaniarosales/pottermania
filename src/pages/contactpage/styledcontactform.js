@@ -8,6 +8,7 @@ export const ContainerSection = styled.section`
     align-items: center;
     background-color: #131415;
     padding: 2rem;
+    padding-top: 100px;
 
     background-image: url(/img/hero/hero.jpeg);
     background-repeat: no-repeat;
@@ -80,15 +81,13 @@ export const StyledField = styled.input`
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 90%;
-  &:focus {
-    border-color: #007bff;
-    outline: none;
-  }
+  outline: none;
 `;
 
 // Estilo para el textarea
 export const TextArea = styled(StyledField)`
-  height: 100px;
+  height: 80px;
+
 `;
 
 // Estilo para los mensajes de error

@@ -18,7 +18,6 @@ function Hero() {
       </StyledSection>
       <AboutUs/>
       <FeaturedProducts/>
-      <ContactFormPage/>
     </>
   )
 }

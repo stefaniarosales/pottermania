@@ -25,7 +25,7 @@ const ContactFormPage = () => {
   return (
     <ContainerSection>
     <Container>
-      <Title>Contacto</Title>
+      <Title>Contáctanos</Title>
       <Formik
         initialValues={{ nombre: '', apellido: '', email: '', asunto: '' }}
         validationSchema={validationSchema}
