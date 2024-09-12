@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 
-import { productsforsale } from '../../data/products'
 import Card from './card/Card'
 import Categorys from './categorys/Categorys'
 
@@ -17,6 +16,11 @@ function ProductsPage() {
   const category = useSelector((state) => state.products.selectedCategory)
   const visibleProducts = useSelector((state) => state.products.visibleProducts )
   const dispatch = useDispatch()
+
+  //realiza el scroll hasta la parte superior cuando se carga el componente
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, [])
 
   //selecccionar category al hacer click
   const handleCategoryClick = (category) => {

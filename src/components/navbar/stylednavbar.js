@@ -56,7 +56,8 @@ export const Styledlinks = styled.div`
   /* Menú abierto en móvil */
   &.menu-open {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
     position: absolute;
     top: 100px;
     left: 0;

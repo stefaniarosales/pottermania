@@ -13,12 +13,13 @@ export const StyledContainer = styled.div`
 
 export const StyledImg = styled.img`
     width: 250px;
-    height: 350px;
+    height: 250px;
     object-fit: contain;
     margin-bottom: 16px;
 `
 
 export const StyledTitle = styled.h3`
+    height: 40px;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 8px;

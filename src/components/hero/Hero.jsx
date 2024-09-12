@@ -1,6 +1,7 @@
 import React from 'react'
 
 import AboutUs from '../aboutus/AboutUs'
+import FeaturedProducts from '../featuredproducts/FeaturedProducts'
 
 //styles
 import { StyledSection, StyledTitle, StyledSubTitle } from '../hero/StyledHero'
@@ -15,6 +16,7 @@ function Hero() {
         </StyledSubTitle>
       </StyledSection>
       <AboutUs/>
+      <FeaturedProducts/>
     </>
   )
 }

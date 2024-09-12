@@ -10,7 +10,6 @@ background-color: #131415;
   flex-direction: column;
   justify-content: center;
   padding: 32px;
-  padding-top: 150px;
   align-items: center;
 `;
 
@@ -25,3 +24,10 @@ export const StyledProductsContainer = styled.div`
     }
 `;
 
+export const StyledSeeAllProductsBtn = styled.button`
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bolder;
+`
