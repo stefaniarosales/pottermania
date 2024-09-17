@@ -13,9 +13,15 @@ export const StyledContainerNavbar = styled.nav`
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   /* Para tablet y desktop, muestra siempre el menú */
   @media (min-width: 768px) {
-    justify-content: space-between;
+    
   }
-`;
+`
+
+export const StyledContainerIconsMenuCart = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 export const StyledContainerLogo = styled.div`
   display: flex;
@@ -38,7 +44,6 @@ export const Styledlinks = styled.div`
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    padding-right: 3rem;
   }
 
   a {
