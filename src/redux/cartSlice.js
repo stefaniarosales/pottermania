@@ -1,13 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-const initialState = {
-    items: [],  // array de productos agregados al carrito.
-    isOpen: false, // estado inicial  del carrito cerrado.
-}
-
 const cartSlice = createSlice({
     name: 'cart',
-    initialState,
+    initialState: {
+        items: [],  // array de productos agregados al carrito.
+        isOpen: false // estado inicial  del carrito cerrado.
+    },
     reducers: {
         addItem: (state, action) => {  //agregar un items al cart
             const product ={...action.payload, quantity: 1}
@@ -44,12 +42,6 @@ const cartSlice = createSlice({
         },
         toggleCart: (state) => {
             state.isOpen = !state.isOpen
-        },
-        closeCart: (state) => {
-            state.isOpen = false
-        },
-        openCart: (state) => {
-            state.isOpen = true
         }
     }
 })

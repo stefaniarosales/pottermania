@@ -22,6 +22,7 @@ function Navbar() {
   const handleToggleMenu = () => {
     dispatch(toggleMenu())
   };
+  console.log(isOpen)
 
   return (
     <>

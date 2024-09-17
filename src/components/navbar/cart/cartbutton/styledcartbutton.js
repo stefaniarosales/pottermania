@@ -16,10 +16,10 @@ export const StyledCartButton = styled.button`
   background-color: transparent;
   color: #131415;
   cursor: pointer;
-  animation: ${({ isOpen }) => (isOpen ? bounce : 'none')} 0.3s ease-in-out;
-
+  animation: ${({ $isOpen }) => ($isOpen ? bounce : 'none')} 0.3s ease-in-out;
   &:hover {
     transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
   }
 `;
 

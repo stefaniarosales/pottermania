@@ -3,24 +3,30 @@ import styled from 'styled-components';
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   top: 100px;
-  width: 50%;
+  width: 40%;
   left: 0;
   padding: 20px;
   background-color: #fff;
   position: absolute;
   z-index: 1000;
+
+  @media (max-width: 768px) {
+    width: 60%;
+  }
 `;
 
 export const StyledSubtitleCart = styled.h2`
   color: #495057;
+  text-align: center;
 `
 
 export const StyledItemsList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
-  max-height: 300px; /* Limitar la altura del contenedor */
+  max-height: 290px; /* Limitar la altura del contenedor */
   overflow-y: auto;  /* Habilitar el scroll vertical si es necesario */
   border-bottom: 1px solid #dee2e6;
   margin-bottom: 20px;
