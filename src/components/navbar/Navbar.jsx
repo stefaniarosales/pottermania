@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect, useRef} from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleMenu } from '../../redux/menuSlice'
+import { toggleMenu, closeMenu } from '../../redux/menuSlice'
 
 
 import {
@@ -18,24 +18,53 @@ import Cart from './cart/Cart'
 function Navbar() {
   const dispatch = useDispatch();
   const isOpen = useSelector((state) => state.menu.isOpen); // Obtiene el estado del menú desde Redux
+  const menuRef = useRef(null) // Ref para el área del menú
+  const buttonRef = useRef(null); // Ref para el botón del menú
 
   const handleToggleMenu = () => {
     dispatch(toggleMenu())
   };
-  console.log(isOpen)
+  console.log("desde el Cart", isOpen)
+
+  // Cierra el menú si se hace clic fuera de él
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Verifica si el clic es fuera del área del menú y fuera del botón de menú
+      if (
+        menuRef.current && 
+        !menuRef.current.contains(event.target) &&
+        buttonRef.current && 
+        !buttonRef.current.contains(event.target)
+      ) {
+        dispatch(closeMenu());
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, dispatch]);
 
   return (
     <>
       <StyledContainerNavbar>
         <StyledContainerIconsMenuCart>
-          <BurgerButton isOpen={isOpen} handleToggleMenu={handleToggleMenu} />
+          <div ref={buttonRef}>
+            <BurgerButton isOpen={isOpen} handleToggleMenu={handleToggleMenu} />
+          </div>
           <CartButton/>
         </StyledContainerIconsMenuCart>
 
         <Cart/>
 
         {/* Links que cambian según el estado de isOpen */}
-        <Styledlinks className={isOpen ? 'menu-open' : ''}>
+        <Styledlinks ref={menuRef} className={isOpen ? 'menu-open' : ''}>
           <Link to='/'>Home</Link>
           <Link to='AboutUsPage'>About Us</Link>
           <Link to='ProductsPage'>Products</Link>

@@ -38,12 +38,18 @@ export const Styledlinks = styled.div`
   display: none;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transform: translateX(-100%); /* Desplaza el menú completamente fuera de la pantalla hacia la izquierda */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Duración y suavidad de la transición */
 
   /* Mostrar el menú en tablet/desktop */
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    opacity: 1;
+    transform: translateX(0); /* Para tablet/desktop, sin desplazamiento */
+    transition: none; /* Sin animación en tamaños grandes */
   }
 
   a {
@@ -72,8 +78,9 @@ export const Styledlinks = styled.div`
     height: 100vh;
     flex-direction: column;
     background-color: #fff;
+    opacity: 1;
+    transform: translateX(0); /* Restablece la posición inicial */
   }
-  
 `;
 
 
