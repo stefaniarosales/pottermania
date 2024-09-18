@@ -5,6 +5,7 @@ import {Routes,Route} from "react-router-dom"
 import Navbar from './components/navbar/Navbar'
 import Hero from "./components/hero/Hero"
 import Footer from "./components/footer/Footer"
+import ScrollButton from "./components/scroll/ScrollButton"
 
 
 //pages
@@ -30,6 +31,7 @@ function App() {
         <Route path="*" element={<NoPage/>}/>
       </Routes>
       <Footer/>
+      <ScrollButton/>
     </>
   )
 }

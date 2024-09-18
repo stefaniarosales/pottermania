@@ -1,6 +1,6 @@
-import React, { useMemo, useRef, useEffect } from 'react';
+import React, { useMemo, useRef, useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeItem, updateQuantity, clearCart, closeCart } from '../../../redux/cartSlice';
+import { removeItem, updateQuantity, clearCart, toggleCart} from '../../../redux/cartSlice';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 import {
@@ -23,6 +23,8 @@ const Cart = () => {
   const items = useSelector((state) => state.cart.items)
   const isOpen = useSelector((state) => state.cart.isOpen)
   const dispatch = useDispatch()
+
+  const [isClickOutside, setIsClickOutside] = useState(false);
   const cartRef = useRef(null)
 
   const handleRemoveItem = (id) => {
@@ -42,7 +44,7 @@ const Cart = () => {
       }
     }
   };
-
+  //borrar todos los productos del carrito
   const handleClearCart = () => {
     dispatch(clearCart());
   };
@@ -55,16 +57,25 @@ const Cart = () => {
   // Cerrar el carrito si se hace clic fuera del componente
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (isOpen && cartRef.current && !cartRef.current.contains(e.target)) {
-        dispatch(closeCart())
+      // Si el clic no fue dentro del carrito y el carrito está abierto
+      if (cartRef.current && !cartRef.current.contains(e.target)) {
+        setIsClickOutside(true); // Cambia el estado para cerrar el carrito
       }
     };
+  
     document.addEventListener('mousedown', handleClickOutside);
-
+  
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isOpen, dispatch]);
+  }, []);
+
+  useEffect(() => {
+    if (isClickOutside && isOpen) {
+      dispatch(toggleCart()); // Cierra el carrito
+      setIsClickOutside(false); // Resetea el estado para futuras detecciones de clic fuera
+    }
+  }, [isClickOutside, isOpen, dispatch]);
 
   return (
   isOpen && (

@@ -13,10 +13,14 @@ const CartButton = () => {
   // Contar la cantidad total de productos en el carrito
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
 
-  console.log(isOpen)
+  console.log("Estado isOpen en CartButton:", isOpen);
 
   return (
-    <StyledCartButton onClick={() => dispatch(toggleCart())} $isOpen={isOpen}>
+    <StyledCartButton onClick={(e) => {
+      e.stopPropagation(); // Evita la propagación del clic al documento
+      dispatch(toggleCart()); // Activa o desactiva el carrito
+    }}
+    $isOpen={isOpen}>
     <ShoppingCartIcon sx={{ fontSize: 40 }} />
     {totalItems > 0 && <StyledCartCount>{totalItems}</StyledCartCount>}
   </StyledCartButton>

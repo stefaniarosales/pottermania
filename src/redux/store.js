@@ -3,13 +3,15 @@ import menuReducer from './menuSlice';
 import productsReducer from './productsSlice';
 import featuredproductsReducer from './featuredproductsSlice'
 import cartReducer from './cartSlice'
+import scrollReducer from './scrollSlice'
 
 const store = configureStore({
     reducer: {
         menu: menuReducer,
         products: productsReducer,
         featuredProducts: featuredproductsReducer,
-        cart: cartReducer
+        cart: cartReducer,
+        scroll: scrollReducer
     },
 });
 
