@@ -40,7 +40,7 @@ export const Styledlinks = styled.div`
   align-items: center;
   opacity: 0;
   transform: translateX(-100%); /* Desplaza el menú completamente fuera de la pantalla hacia la izquierda */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Duración y suavidad de la transición */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Aumenta la duración de la transición a 0.5s */
 
   /* Mostrar el menú en tablet/desktop */
   @media (min-width: 768px) {
