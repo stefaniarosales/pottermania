@@ -18,3 +18,6 @@ npm install yup
 
 // sweetalert2
 npm install sweetalert2
+
+//redux-persist
+npm install redux-persist

@@ -57,14 +57,16 @@ const Cart = () => {
   // Cerrar el carrito si se hace clic fuera del componente
   useEffect(() => {
     const handleClickOutside = (e) => {
-      // Si el clic no fue dentro del carrito y el carrito está abierto
-      if (cartRef.current && !cartRef.current.contains(e.target)) {
+      // Verifica si el clic fue en el botón de "Agregar al carrito" o dentro del carrito
+      const isAddToCartButton = e.target.closest('.add-to-cart-btn');
+
+      if (!isAddToCartButton && cartRef.current && !cartRef.current.contains(e.target)) {
         setIsClickOutside(true); // Cambia el estado para cerrar el carrito
       }
     };
-  
+
     document.addEventListener('mousedown', handleClickOutside);
-  
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -76,6 +78,7 @@ const Cart = () => {
       setIsClickOutside(false); // Resetea el estado para futuras detecciones de clic fuera
     }
   }, [isClickOutside, isOpen, dispatch]);
+
 
   return (
   isOpen && (

@@ -19,6 +19,16 @@ export const StyledCategoryBtn = styled.button`
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    transition: color 0.3s ease;
+
+    background-color: ${({ isSelected }) => (isSelected ? "#86818a" : "#fff")};
+    color: ${({ isSelected }) => (isSelected ? "#fff" : "#333")};
+   /*  border: 2px solid ${({ isSelected }) => (isSelected ? 'red' : '#131415')}; */
+
+    &:hover {
+        color: white;
+        background-color: #86818a;
+    }
 
     @media (max-width: 768px) {
         width: 120px;

@@ -1,8 +1,7 @@
 import React, { useEffect, useRef} from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleMenu, closeMenu } from '../../redux/menuSlice'
-
 
 import {
   StyledContainerNavbar,
@@ -19,7 +18,8 @@ function Navbar() {
   const dispatch = useDispatch();
   const isOpen = useSelector((state) => state.menu.isOpen); // Obtiene el estado del menú desde Redux
   const menuRef = useRef(null) // Ref para el área del menú
-  const buttonRef = useRef(null); // Ref para el botón del menú
+  const buttonRef = useRef(null) // Ref para el botón del menú
+  const location = useLocation() // Obtener la ruta actual
 
   const handleToggleMenu = () => {
     dispatch(toggleMenu())
@@ -53,7 +53,7 @@ function Navbar() {
 
   return (
     <>
-      <StyledContainerNavbar>
+      <StyledContainerNavbar >
         <StyledContainerIconsMenuCart>
           <div ref={buttonRef}>
             <BurgerButton isOpen={isOpen} handleToggleMenu={handleToggleMenu} />
@@ -65,10 +65,10 @@ function Navbar() {
 
         {/* Links que cambian según el estado de isOpen */}
         <Styledlinks ref={menuRef} className={isOpen ? 'menu-open' : ''}>
-          <Link to='/'>Home</Link>
-          <Link to='AboutUsPage'>About Us</Link>
-          <Link to='ProductsPage'>Products</Link>
-          <Link to='ContactFormPage'>Contact</Link>
+        <Link to='/' className={location.pathname === '/' ? 'active-link' : ''}>Home</Link>
+          <Link to='/AboutUsPage' className={location.pathname === '/AboutUsPage' ? 'active-link' : ''}>About Us</Link>
+          <Link to='/ProductsPage' className={location.pathname === '/ProductsPage' ? 'active-link' : ''}>Products</Link>
+          <Link to='/ContactFormPage' className={location.pathname === '/ContactFormPage' ? 'active-link' : ''}>Contact</Link>
         </Styledlinks>
 
         <StyledContainerLogo>

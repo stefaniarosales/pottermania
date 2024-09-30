@@ -6,7 +6,7 @@ import { StyledButton } from './StyledButton'
 export default function Button({children}) {
   return (
     <>
-      <StyledButton>
+      <StyledButton className="add-to-cart-btn" >
       {children}
       </StyledButton>
     </>

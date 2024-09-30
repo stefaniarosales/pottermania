@@ -61,9 +61,15 @@ export const Styledlinks = styled.div`
     transition: color 0.3s ease;
 
     &:hover {
-      color: #86818a;
+      color: red;
     }
   }
+
+  a.active-link {
+    color: red; 
+    border-bottom: 1px solid red; 
+  }
+
 
   /* Menú abierto en móvil */
   &.menu-open {

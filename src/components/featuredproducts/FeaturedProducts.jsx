@@ -34,7 +34,7 @@ function FeaturedProducts() {
           />
         ))}
       </StyledProductsContainer>
-      <Link to='/productsPage'>
+      <Link to='/ProductsPage'>
         <StyledSeeAllProductsBtn>Ver todos</StyledSeeAllProductsBtn>
       </Link>
     </StyledSectionContainer>

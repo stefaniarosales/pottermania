@@ -22,7 +22,7 @@ const Card = ( {image, title, price, id}) => {
             <StyledImg src={image} alt={title} />
             <StyledTitle>{title}</StyledTitle>
             <StyledPrice>${price}</StyledPrice>
-            <StyledButton onClick={handleAddToCart}>Agregar</StyledButton>
+            <StyledButton className="add-to-cart-btn" onClick={handleAddToCart}>Agregar</StyledButton>
         </StyledContainer>
     )
 }

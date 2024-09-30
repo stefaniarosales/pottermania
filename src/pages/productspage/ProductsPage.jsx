@@ -44,7 +44,7 @@ function ProductsPage() {
     <>
       <StyledSectionContainer>
         <StyledSubTitleProducts>Tesoros de Hogwarts</StyledSubTitleProducts>
-        <Categorys onCategoryClick={handleCategoryClick} />
+        <Categorys onCategoryClick={handleCategoryClick} selectedCategory={category} />
         <StyledProductsContainer>
           {displayedProducts.map((product) => (
             <Card key={product.id} {...product}/>
