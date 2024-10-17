@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledContainer=styled.footer`
+    height: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,10 +12,11 @@ export const StyledInfo=styled.p`
     font-size: 10px;
     font-weight: lighter;
     color: #000000;
+    margin: 0;
 `;
 
 export const StyledLogo=styled.img`
     width: 150px;
-    height: 55px;
-    padding-top: 1rem;
+    height: 50px;
+    padding-top: 0.5rem;
 `
