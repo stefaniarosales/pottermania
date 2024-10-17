@@ -15,7 +15,7 @@ const fadeIn = keyframes`
 export const HarryPotterContainer = styled.div`
   display: inline-block;
   font-size: 3rem;
-  font-family: 'Harry Potter', sans-serif;
+  font-family: 'helvetica', sans-serif;
   color: red;
   
 `;
@@ -25,6 +25,11 @@ export const Letter = styled.span`
   opacity: 0;
   animation: ${fadeIn} 0.6s ease forwards;
   animation-delay: ${({ delay }) => delay}s;
+`;
+
+export const Space = styled.span`
+  display: inline-block;
+  width: 0.5rem; /* Ajusta el tamaño del espacio si es necesario */
 `;
 
 

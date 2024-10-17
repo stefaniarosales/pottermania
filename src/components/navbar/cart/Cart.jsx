@@ -2,6 +2,7 @@ import React, { useMemo, useRef, useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity, clearCart, toggleCart} from '../../../redux/cartSlice';
 import DeleteIcon from '@mui/icons-material/Delete';
+import Swal from 'sweetalert2'
 
 import {
   StyledContainer,
@@ -53,6 +54,21 @@ const Cart = () => {
   const totalPrice = useMemo(() => {
     return items.reduce((total, item) => total + item.price * item.quantity, 0);
   }, [items]);
+
+  // Mostrar modal de éxito al finalizar compra
+  const handleFinishPurchase = () => {
+
+    dispatch(clearCart());
+
+    // SweetAlert para mostrar el modal de éxito
+    Swal.fire({
+      title: '¡Compra realizada con éxito!',
+      text: 'Gracias por tu compra',
+      icon: 'success',
+      timer: 3000, 
+      showConfirmButton: false,
+    });
+  };
 
   // Cerrar el carrito si se hace clic fuera del componente
   useEffect(() => {
@@ -113,7 +129,7 @@ const Cart = () => {
           <StyledTotal>Total: ${totalPrice.toFixed(2)}</StyledTotal>
           <StyledActions>
             <StyledActionButton onClick={handleClearCart}>Borrar productos</StyledActionButton>
-            <StyledActionButton>Finalizar compra</StyledActionButton>
+            <StyledActionButton onClick={handleFinishPurchase}>Finalizar compra</StyledActionButton>
           </StyledActions>
         </>
       )}
