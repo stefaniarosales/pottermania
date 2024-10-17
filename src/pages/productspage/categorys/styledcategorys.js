@@ -16,10 +16,11 @@ export const StyledCategoryBtn = styled.button`
     font-weight: bold;
     padding: 10px;
     margin: 0 1rem;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
 
     background-color: ${({ isSelected }) => (isSelected ? "#86818a" : "#fff")};
     color: ${({ isSelected }) => (isSelected ? "#fff" : "#333")};

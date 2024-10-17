@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledContainerNavbar = styled.nav`
-  height: 70px;
+  height: 50px;
   width: 100%;
   z-index: 1000;
   display: flex;
@@ -11,10 +11,6 @@ export const StyledContainerNavbar = styled.nav`
   padding: 1rem;
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  /* Para tablet y desktop, muestra siempre el menú */
-  @media (min-width: 768px) {
-    
-  }
 `
 
 export const StyledContainerIconsMenuCart = styled.div`
@@ -29,7 +25,7 @@ export const StyledContainerLogo = styled.div`
 `;
 
 export const StyledLogo = styled.img`
-  width: 70px;
+  width: 55px;
   height: auto;
   padding-right: 3rem;
 `;
@@ -77,7 +73,7 @@ export const Styledlinks = styled.div`
     justify-content: flex-start;
     padding-top: 2rem;
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 0;
     right: 0;
     width: 50%;
@@ -85,7 +81,7 @@ export const Styledlinks = styled.div`
     flex-direction: column;
     background-color: #fff;
     opacity: 1;
-    transform: translateX(0); /* Restablece la posición inicial */
+    transform: translateX(0);
   }
 `;
 

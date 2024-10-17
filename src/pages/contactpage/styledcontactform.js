@@ -14,6 +14,7 @@ export const ContainerSection = styled.section`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
 `
 
 // Contenedor principal del formulario
@@ -103,6 +104,10 @@ export const SubmitButton = styled.button`
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+  border: none;
+  outline: 1px black solid;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
   &:hover {
     background-color: #131415;
     color: white;
