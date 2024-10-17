@@ -4,7 +4,6 @@ import { toggleCart } from '../../../../redux/cartSlice'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import { StyledCartButton, StyledCartCount } from './styledcartbutton'
 
-
 const CartButton = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector((state) => state.cart.isOpen)
@@ -15,10 +14,15 @@ const CartButton = () => {
 
   console.log("Estado isOpen en CartButton:", isOpen);
 
+  const handleToggleCart = () => {
+    if (!isOpen) {
+      dispatch(toggleCart());
+    }
+  };
   return (
-    <StyledCartButton onClick={(e) => {
-      e.stopPropagation(); // Evita la propagación del clic al documento
-      dispatch(toggleCart()); // Activa o desactiva el carrito
+    <StyledCartButton onClick={(event) => {
+      event.stopPropagation(); // Evita la propagación del click al documento
+      handleToggleCart()
     }}
     $isOpen={isOpen}>
     <ShoppingCartIcon sx={{ fontSize: 40 }} />
