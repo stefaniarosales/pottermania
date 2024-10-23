@@ -15,7 +15,7 @@ export default function AboutUs() {
           Nuestro equipo está formado por fanáticos apasionados de Harry Potter que se dedican a brindarle todo lo que necesita para abrazar su lado mágico. Ya sea que sea un Gryffindor de corazón, un Slytherin astuto o un Hufflepuff leal, tenemos algo para todos.
         </StyledParrafo>
         <Link to='/AboutUsPage'>
-          <StyledAboutBtn>Descubre la Magia</StyledAboutBtn>
+          <StyledAboutBtn>¡Descubre la magia!</StyledAboutBtn>
         </Link>
         </StyledSection>
     </>

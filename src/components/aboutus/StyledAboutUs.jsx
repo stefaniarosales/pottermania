@@ -6,7 +6,7 @@ export const StyledSection=styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 20px;
     height: 500px;
 `;
@@ -26,7 +26,7 @@ export const StyledParrafo=styled.p`
 `;
 
 export const StyledAboutBtn=styled.button`
-    width: 150px;
+    width: 200px;
     height: 50px;
     padding: 10px;
     border-radius: 5px;

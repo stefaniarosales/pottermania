@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const StyledButton = styled.button`
-   width: 150px;
+    width: ${(props) => props.width || "150px"};
    height: 50px;
    padding: 10px;
    border-radius: 5px;
@@ -11,6 +11,7 @@ export const StyledButton = styled.button`
    outline: 1px black solid;
    color: #000;
    cursor: pointer;
+   font-weight: bolder;
    transition: background-color 0.3s ease, color 0.3s ease;
 
    &:hover {

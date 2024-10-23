@@ -30,6 +30,24 @@ const Cart = () => {
 
   const handleRemoveItem = (id) => {
     dispatch(removeItem({ id }))
+
+    // Configuración del Toast para eliminar un producto
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      },
+    });
+    // Mostrar el Toast
+    Toast.fire({
+      icon: 'error',
+      title: '¡Producto eliminado!',
+    });
   }
 
   const handleQuantityChange = (id, delta) => {
@@ -73,21 +91,17 @@ const Cart = () => {
   // Cerrar el carrito si se hace clic fuera del componente
   useEffect(() => {
     const handleClickOutside = (e) => {
-      // Verifica si el clic fue en el botón de "Agregar al carrito" o dentro del carrito
-      const isAddToCartButton = e.target.closest('.add-to-cart-btn');
-
-      if (!isAddToCartButton && cartRef.current && !cartRef.current.contains(e.target)) {
-        setIsClickOutside(true); // Cambia el estado para cerrar el carrito
+      if (cartRef.current && !cartRef.current.contains(e.target)) {
+        dispatch(toggleCart()); // Cierra el carrito si está abierto
       }
     };
-
+  
     document.addEventListener('mousedown', handleClickOutside);
-
+  
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     }
-  }, [])
-
+  }, [dispatch]);
   useEffect(() => {
     if (isClickOutside && isOpen) {
       dispatch(toggleCart()); // Cierra el carrito

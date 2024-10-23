@@ -14,9 +14,7 @@ const CartButton = () => {
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
 
   const handleToggleCart = () => {
-    if (!isOpen) {
       dispatch(toggleCart())
-    }
   }
   return (
     <StyledCartButton onClick={(event) => {

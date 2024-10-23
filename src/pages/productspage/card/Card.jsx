@@ -1,6 +1,7 @@
 import React from "react"
 import { addItem, toggleCart } from "../../../redux/cartSlice"
 import { useDispatch, useSelector } from "react-redux"
+import Swal from "sweetalert2";
 
 //styles
 import { StyledContainer, StyledTitle, StyledImg, StyledPrice } from "./styledcard"
@@ -10,15 +11,31 @@ import { StyledButton } from "../../../components/ui/button/StyledButton"
 const Card = ( {image, title, price, id}) => {
 
     const dispatch = useDispatch()
-    const isOpen =  useSelector((state) => state.cart.isOpen)
-    console.log("Estado isOpen en Card:", isOpen);
+   /*  const isOpen =  useSelector((state) => state.cart.isOpen) */
 
     const handleAddToCart = () => {
         dispatch(addItem({id,title,price}))
-        // Solo abrir el carrito si está cerrado
+      /*   // Solo abrir el carrito si está cerrado
         if(!isOpen) {
             dispatch(toggleCart())
-        }
+        } */
+         // Configuración del Toast
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+            }
+        })
+        // Mostrar el Toast
+        Toast.fire({
+            icon: "success",
+            title: "¡Producto agregado!"
+        })
     }
 
     return (
