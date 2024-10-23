@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleCart } from '../../../../redux/cartSlice'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+//styles
 import { StyledCartButton, StyledCartCount } from './styledcartbutton'
 
 const CartButton = () => {
@@ -12,13 +13,11 @@ const CartButton = () => {
   // Contar la cantidad total de productos en el carrito
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
 
-  console.log("Estado isOpen en CartButton:", isOpen);
-
   const handleToggleCart = () => {
     if (!isOpen) {
-      dispatch(toggleCart());
+      dispatch(toggleCart())
     }
-  };
+  }
   return (
     <StyledCartButton onClick={(event) => {
       event.stopPropagation(); // Evita la propagación del click al documento
@@ -31,4 +30,4 @@ const CartButton = () => {
   );
 }; 
 
-export default CartButton;
+export default CartButton

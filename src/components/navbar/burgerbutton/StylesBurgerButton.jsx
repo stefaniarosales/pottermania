@@ -6,8 +6,6 @@ export const StyledBurgerButton = styled.button`
   cursor: pointer;
   display: flex;
   align-items: center;
-
-  /* Ocultar el botón en tablet y desktop */
   @media (min-width: 768px) {
     display: none;
   }
@@ -51,4 +49,4 @@ export const StyledBurgerButton = styled.button`
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
   }
-`;
+`

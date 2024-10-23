@@ -22,30 +22,28 @@ export const StyledContainerIconsMenuCart = styled.div`
 export const StyledContainerLogo = styled.div`
   display: flex;
   align-items: center;
-`;
+`
 
 export const StyledLogo = styled.img`
   width: 55px;
   height: auto;
   padding-right: 3rem;
-`;
+`
 
 export const Styledlinks = styled.div`
   display: none;
   flex-direction: column;
   align-items: center;
   opacity: 0;
-  transform: translateX(-100%); /* Desplaza el menú completamente fuera de la pantalla hacia la izquierda */
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Aumenta la duración de la transición a 0.5s */
-
-  /* Mostrar el menú en tablet/desktop */
+  transform: translateX(-100%); 
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
     gap: 2rem;
     opacity: 1;
-    transform: translateX(0); /* Para tablet/desktop, sin desplazamiento */
-    transition: none; /* Sin animación en tamaños grandes */
+    transform: translateX(0);
+    transition: none;
   }
 
   a {
@@ -55,7 +53,6 @@ export const Styledlinks = styled.div`
     font-weight: bolder;
     padding: 0.5rem;
     transition: color 0.3s ease;
-
     &:hover {
       color: red;
     }
@@ -65,7 +62,6 @@ export const Styledlinks = styled.div`
     color: red; 
     border-bottom: 1px solid red; 
   }
-
 
   /* Menú abierto en móvil */
   &.menu-open {

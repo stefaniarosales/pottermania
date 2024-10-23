@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyledBurgerButton } from './StylesBurgerButton';
+import React from 'react'
+import { StyledBurgerButton } from './StylesBurgerButton'
 
 function BurgerButton({ isOpen, handleToggleMenu }) {
 
@@ -16,7 +16,6 @@ function BurgerButton({ isOpen, handleToggleMenu }) {
             <path className="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
         </svg>
     </StyledBurgerButton>
-        );
-    }
+    )}
 
-export default BurgerButton;
+export default BurgerButton

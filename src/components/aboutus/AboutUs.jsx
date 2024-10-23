@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 //styles
 import { StyledSection, StyledSubtitle, StyledParrafo, StyledAboutBtn } from './StyledAboutUs'
 
@@ -18,7 +17,6 @@ export default function AboutUs() {
         <Link to='/AboutUsPage'>
           <StyledAboutBtn>Descubre la Magia</StyledAboutBtn>
         </Link>
-        
         </StyledSection>
     </>
   )

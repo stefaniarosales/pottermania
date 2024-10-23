@@ -2,8 +2,8 @@ import React from 'react'
 import { HarryPotterContainer, Letter, Space } from './StyledHarryPotterText'
 
 const HarryPotterText = () => {
-    const text = 'Harry  Potter';
-  
+    const text = 'Harry  Potter'
+
     return (
         <HarryPotterContainer>
         {text.split('').map((char, index) =>
@@ -19,4 +19,4 @@ const HarryPotterText = () => {
     );
   };
   
-  export default HarryPotterText;
+  export default HarryPotterText

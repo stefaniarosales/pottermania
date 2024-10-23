@@ -1,9 +1,7 @@
 import React from 'react'
-
 import AboutUs from '../aboutus/AboutUs'
 import FeaturedProducts from '../featuredproducts/FeaturedProducts'
 import HarryPotterText from './HarryPotterText'
-
 //styles
 import { StyledSection, StyledTitle, StyledSubTitle } from '../hero/StyledHero'
 

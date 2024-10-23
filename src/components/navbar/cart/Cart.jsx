@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity, clearCart, toggleCart} from '../../../redux/cartSlice';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Swal from 'sweetalert2'
-
+//styles
 import {
   StyledContainer,
   StyledSubtitleCart,
@@ -30,11 +30,11 @@ const Cart = () => {
 
   const handleRemoveItem = (id) => {
     dispatch(removeItem({ id }))
-  };
+  }
 
   const handleQuantityChange = (id, delta) => {
     setQuantity(id, delta);
-  };
+  }
 
   const setQuantity = (id, delta) => {
     const item = items.find(item => item.id === id);
@@ -44,7 +44,8 @@ const Cart = () => {
         dispatch(updateQuantity({ id, quantity: newQuantity }));
       }
     }
-  };
+  }
+
   //borrar todos los productos del carrito
   const handleClearCart = () => {
     dispatch(clearCart());
@@ -57,7 +58,6 @@ const Cart = () => {
 
   // Mostrar modal de éxito al finalizar compra
   const handleFinishPurchase = () => {
-
     dispatch(clearCart());
 
     // SweetAlert para mostrar el modal de éxito
@@ -67,8 +67,8 @@ const Cart = () => {
       icon: 'success',
       timer: 3000, 
       showConfirmButton: false,
-    });
-  };
+    })
+  }
 
   // Cerrar el carrito si se hace clic fuera del componente
   useEffect(() => {
@@ -85,16 +85,15 @@ const Cart = () => {
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+    }
+  }, [])
 
   useEffect(() => {
     if (isClickOutside && isOpen) {
       dispatch(toggleCart()); // Cierra el carrito
       setIsClickOutside(false); // Resetea el estado para futuras detecciones de clic fuera
     }
-  }, [isClickOutside, isOpen, dispatch]);
-
+  }, [isClickOutside, isOpen, dispatch])
 
   return (
   isOpen && (
@@ -119,7 +118,6 @@ const Cart = () => {
                     <StyledQuantityButton onClick={() => handleQuantityChange(item.id, 1)}>+</StyledQuantityButton>
                   </div>
                 </StyledItemDetails>
-
                 <StyledItemRemoveButton onClick={() => handleRemoveItem(item.id)}>
                   <DeleteIcon />
                 </StyledItemRemoveButton>
@@ -135,7 +133,7 @@ const Cart = () => {
       )}
     </StyledContainer>
   )
-  );
-};
+  )
+}
 
-export default Cart;
+export default Cart

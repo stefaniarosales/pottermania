@@ -1,6 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 
-// Animación para el ícono del carrito
 const bounce = keyframes`
   0%, 100% {
     transform: scale(1);
@@ -8,7 +7,7 @@ const bounce = keyframes`
   50% {
     transform: scale(1.1);
   }
-`;
+`
 
 export const StyledCartButton = styled.button`
   all: unset;
@@ -21,9 +20,8 @@ export const StyledCartButton = styled.button`
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
   }
-`;
+`
 
-// Estilos para mostrar la cantidad de productos en el carrito
 export const StyledCartCount = styled.span`
   position: absolute;
   top: -10px;
@@ -38,4 +36,4 @@ export const StyledCartCount = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`

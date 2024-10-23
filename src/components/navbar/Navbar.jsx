@@ -2,7 +2,7 @@ import React, { useEffect, useRef} from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleMenu, closeMenu } from '../../redux/menuSlice'
-
+//styles
 import {
   StyledContainerNavbar,
   StyledContainerIconsMenuCart,
@@ -23,8 +23,7 @@ function Navbar() {
 
   const handleToggleMenu = () => {
     dispatch(toggleMenu())
-  };
-  console.log("desde el Cart", isOpen)
+  }
 
   // Cierra el menú si se hace clic fuera de él
   useEffect(() => {
@@ -38,7 +37,7 @@ function Navbar() {
       ) {
         dispatch(closeMenu());
       }
-    };
+    }
 
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
@@ -48,8 +47,8 @@ function Navbar() {
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isOpen, dispatch]);
+    }
+  }, [isOpen, dispatch])
 
   return (
     <>
@@ -80,4 +79,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar

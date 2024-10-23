@@ -1,4 +1,5 @@
 import React from 'react'
+//styles
 import { StyledContainer, StyledInfo, StyledLogo } from './StyledFooter';
 
 const Footer = () => {
