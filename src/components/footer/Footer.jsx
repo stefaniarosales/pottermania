@@ -11,6 +11,6 @@ const Footer = () => {
       </StyledContainer>
     </>
   )
-};
+}
 
 export default Footer
