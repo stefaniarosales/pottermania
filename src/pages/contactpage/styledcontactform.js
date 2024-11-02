@@ -9,8 +9,6 @@ export const ContainerSection = styled.section`
     background-color: #131415;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-bottom: 1rem;
-    padding-top: 80px;
 
     background-image: url(/img/hero/hero.jpeg);
     background-repeat: no-repeat;
