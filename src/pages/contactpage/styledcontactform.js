@@ -7,14 +7,15 @@ export const ContainerSection = styled.section`
     justify-content: center;
     align-items: center;
     background-color: #131415;
-    padding: 2rem;
-    padding-top: 100px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 80px;
 
     background-image: url(/img/hero/hero.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 `
 
 export const Container = styled.div`
