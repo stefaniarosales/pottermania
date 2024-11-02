@@ -23,12 +23,13 @@ import {
 const Cart = () => {
   const items = useSelector((state) => state.cart.items);
   const isOpen = useSelector((state) => state.cart.isOpen);
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
-  const cartRef = useRef(null);
+  const cartRef = useRef(null)
+  const cartButtonRef = useRef(null)  // Referencia al botón del carrito
 
   const handleRemoveItem = (id) => {
-    dispatch(removeItem({ id }));
+    dispatch(removeItem({ id }))
 
     // Toast para eliminar un producto
     Swal.fire({
@@ -103,17 +104,29 @@ const Cart = () => {
   // Cerrar el carrito si se hace clic fuera del componente
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (cartRef.current && !cartRef.current.contains(e.target)) {
-        dispatch(toggleCart()); // Cierra el carrito si está abierto
+      // Verifica si las referencias existen antes de llamar a contains
+      if (
+        cartRef.current &&
+        !cartRef.current.contains(e.target) && 
+        cartButtonRef.current && 
+        !cartButtonRef.current.contains(e.target)
+      ) {
+        dispatch(toggleCart());
       }
     };
-
-    document.addEventListener('mousedown', handleClickOutside);
-
+  
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+  
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [dispatch]);
+  }, [isOpen, dispatch]);
+
+  console.log(isOpen)
 
   return (
     isOpen && (

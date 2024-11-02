@@ -19,6 +19,7 @@ function Navbar() {
   const isOpen = useSelector((state) => state.menu.isOpen); // Obtiene el estado del menú desde Redux
   const menuRef = useRef(null) // Ref para el área del menú
   const buttonRef = useRef(null) // Ref para el botón del menú
+  const cartRef = useRef(null); // Referencia para el área del carrito
   const location = useLocation() // Obtener la ruta actual
 
   const handleToggleMenu = () => {
@@ -29,12 +30,8 @@ function Navbar() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       // Verifica si el clic es fuera del área del menú y fuera del botón de menú
-      if (
-        menuRef.current && 
-        !menuRef.current.contains(event.target) &&
-        buttonRef.current && 
-        !buttonRef.current.contains(event.target)
-      ) {
+      if( (menuRef.current && !menuRef.current.contains(event.target)) ||
+      (cartRef.current && !cartRef.current.contains(event.target)) ){
         dispatch(closeMenu());
       }
     }
@@ -60,7 +57,7 @@ function Navbar() {
           <CartButton/>
         </StyledContainerIconsMenuCart>
 
-        <Cart/>
+        <Cart ref={cartRef} />
 
         {/* Links que cambian según el estado de isOpen */}
         <Styledlinks ref={menuRef} className={isOpen ? 'menu-open' : ''}>
