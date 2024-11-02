@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 export const ContainerSection = styled.section`
-    width: auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #131415;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
     padding-top: 80px;
 
     background-image: url(/img/hero/hero.jpeg);
