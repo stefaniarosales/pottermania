@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const StyledSubTitleProducts = styled.h2`
   text-align: center;
   font-size: 1.5rem;
-`;
+`
+
 export const StyledSectionContainer = styled.section`
 background-color: #131415;
   display: flex;
@@ -12,7 +13,7 @@ background-color: #131415;
   padding: 32px;
   padding-top: 100px;
   align-items: center;
-`;
+`
 
 export const StyledProductsContainer = styled.div`
   display: flex;
@@ -23,5 +24,5 @@ export const StyledProductsContainer = styled.div`
   @media (max-width: 768px) {
         padding: 0;
     }
-`;
+`
 

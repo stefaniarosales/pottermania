@@ -1,5 +1,4 @@
-
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const ContainerSection = styled.section`
     display: flex;
@@ -17,7 +16,6 @@ export const ContainerSection = styled.section`
 
 `
 
-// Contenedor principal del formulario
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -27,13 +25,11 @@ export const Container = styled.div`
   width: 90%;
 `
 
-// Título del formulario
 export const Title = styled.h2`
   font-size: 24px;
   margin-bottom: 20px;
 `
 
-// Estilo del formulario
 export const StyledForm = styled.div`
   display: flex;
   flex-direction: column;
@@ -49,33 +45,26 @@ export const StyledForm = styled.div`
   border: 1px solid rgba(209, 213, 219, 0.3);
 `
 
-//Contenedor de etiquetas
 export const ContenedorEtiquetas=styled.div`
   display: flex;
   flex-direction: column;
-
   width: 100%;
   padding-bottom: 10px;
 `
-
-//Contenedor de SubmitButton 
+ 
 export const ContainerSubmitButton = styled.div`
   width: 100%;
   text-align: center;
   padding: 5px;
-
 `
 
-// Etiquetas de los campos
 export const Label = styled.label`
   width: 100%;
   font-size: 14px;
   color: #666;
-  `
+`
 
-// Estilo base para los campos de texto
 export const StyledField = styled.input`
-
   padding: 10px;
   padding-left: 10px;
   font-size: 14px;
@@ -83,21 +72,17 @@ export const StyledField = styled.input`
   border-radius: 4px;
   width: 90%;
   outline: none;
-`;
+`
 
-// Estilo para el textarea
 export const TextArea = styled(StyledField)`
   height: 80px;
+`
 
-`;
-
-// Estilo para los mensajes de error
 export const ErrorText = styled.div`
   font-size: 10px;
   color: red;
-`;
+`
 
-// Estilo del botón de enviar
 export const SubmitButton = styled.button`
   width: 150px;
   height: 50px;
@@ -107,7 +92,6 @@ export const SubmitButton = styled.button`
   border: none;
   outline: 1px black solid;
   transition: background-color 0.3s ease, color 0.3s ease;
-  
   &:hover {
     background-color: #131415;
     color: white;
@@ -116,4 +100,4 @@ export const SubmitButton = styled.button`
     background-color: #ccc;
     cursor: not-allowed;
   }
-`;
+`

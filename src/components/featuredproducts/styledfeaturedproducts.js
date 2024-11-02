@@ -3,15 +3,16 @@ import styled from "styled-components";
 export const StyledSubTitleProducts = styled.h2`
   text-align: center;
   font-size: 1.5rem;
-`;
+`
+
 export const StyledSectionContainer = styled.section`
-background-color: #131415;
+  background-color: #131415;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 32px;
   align-items: center;
-`;
+`
 
 export const StyledProductsContainer = styled.div`
   display: flex;
@@ -22,7 +23,7 @@ export const StyledProductsContainer = styled.div`
   @media (max-width: 768px) {
         padding: 0;
     }
-`;
+`
 
 export const StyledSeeAllProductsBtn = styled.button`
     width: 150px;

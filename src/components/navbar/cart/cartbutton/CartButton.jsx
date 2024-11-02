@@ -1,9 +1,9 @@
-import React, { forwardRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { toggleCart } from '../../../../redux/cartSlice';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import React, { forwardRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { toggleCart } from '../../../../redux/cartSlice'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 //styles
-import { StyledCartButton, StyledCartCount } from './styledcartbutton';
+import { StyledCartButton, StyledCartCount } from './styledcartbutton'
 
 // forwardRef para recibir la referencia del padre
 const CartButton = forwardRef((props, ref) => {
@@ -15,7 +15,7 @@ const CartButton = forwardRef((props, ref) => {
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
 
   const handleToggleCart = () => {
-    dispatch(toggleCart());
+    dispatch(toggleCart())
   };
 
   return (
@@ -33,5 +33,4 @@ const CartButton = forwardRef((props, ref) => {
   );
 });
 
-export default CartButton;
-  
+export default CartButton

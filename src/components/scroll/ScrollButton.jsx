@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleScrollButton } from '../../redux/scrollSlice'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
@@ -6,30 +6,30 @@ import { StyledScrollButton } from './styledscrollbutton'
 
 const ScrollButton = () => {
   const dispatch = useDispatch();
-  const showScrollButton = useSelector((state) => state.scroll.showScrollButton);
+  const showScrollButton = useSelector((state) => state.scroll.showScrollButton)
 
   // Manejador para la visibilidad del botón al hacer scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 200) {
-        dispatch(toggleScrollButton(true));
+        dispatch(toggleScrollButton(true))
       } else {
-        dispatch(toggleScrollButton(false));
+        dispatch(toggleScrollButton(false))
       }
-    };
+    }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll)
     };
-  }, [dispatch]);
+  }, [dispatch])
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
-    });
-  };
+    })
+  }
 
   return (
     <>
@@ -39,7 +39,7 @@ const ScrollButton = () => {
         </StyledScrollButton>
       )}
     </>
-  );
-};
+  )
+}
 
-export default ScrollButton;
+export default ScrollButton

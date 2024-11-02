@@ -1,8 +1,8 @@
-
-import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-import Swal from 'sweetalert2';  // Importa SweetAlert
+import React from 'react'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import * as Yup from 'yup'
+import Swal from 'sweetalert2' // Importa SweetAlert
+//styles
 import {  ContainerSection, Container, Title, Label, StyledField, TextArea, ErrorText, SubmitButton, StyledForm, ContenedorEtiquetas,ContainerSubmitButton} from './styledcontactform'
 
 const ContactFormPage = () => {
@@ -20,7 +20,7 @@ const ContactFormPage = () => {
     asunto: Yup.string()
       .min(10, 'El asunto debe tener al menos 10 caracteres')
       .required('El asunto es obligatorio')
-  });
+  })
 
   return (
     <ContainerSection>
@@ -44,7 +44,6 @@ const ContactFormPage = () => {
           }, 400);
         }}
       >
-
         {({ isSubmitting }) => (
         <StyledForm>
           <Form>
@@ -86,4 +85,4 @@ const ContactFormPage = () => {
   )
 }
 
-export default ContactFormPage;
+export default ContactFormPage

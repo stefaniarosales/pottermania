@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit'
 
 const menuSlice = createSlice({
     name: 'menu',
@@ -17,4 +17,4 @@ const menuSlice = createSlice({
 
 export const { toggleMenu, closeMenu } = menuSlice.actions;
 
-export default menuSlice.reducer;
+export default menuSlice.reducer

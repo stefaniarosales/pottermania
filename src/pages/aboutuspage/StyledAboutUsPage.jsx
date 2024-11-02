@@ -9,19 +9,19 @@ export const StyledContainer = styled.section`
     padding: 2rem;
     padding-top: 100px;
     text-align: center;
-`;
+`
 
 export const StyledTitle = styled.h1`
     font-size: 36px;
     margin-bottom: 20px;
     max-width: 950px;
-`;
+`
 
 export const StyledContent = styled.p`
     width: 100%;
     font-size: 16px;
     max-width: 950px;
-`;
+`
 
 export const StyledItems = styled.div`
     width: 100%;
@@ -33,7 +33,7 @@ export const StyledItems = styled.div`
     padding-top: 60px;
     margin-bottom: 10px;
     max-width: 950px;
-`;
+`
 
 export const StyledItem = styled.p`
     font-weight: bold;
@@ -42,5 +42,5 @@ export const StyledItem = styled.p`
     @media (max-width: 768px) {
         padding-bottom: 0.5rem;
     }
-`;
+`
 

@@ -1,8 +1,8 @@
-import React, { useMemo, useRef, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { removeItem, updateQuantity, clearCart, toggleCart } from '../../../redux/cartSlice';
-import DeleteIcon from '@mui/icons-material/Delete';
-import Swal from 'sweetalert2';
+import React, { useMemo, useRef, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { removeItem, updateQuantity, clearCart, toggleCart } from '../../../redux/cartSlice'
+import DeleteIcon from '@mui/icons-material/Delete'
+import Swal from 'sweetalert2'
 //styles
 import {
   StyledContainer,
@@ -18,11 +18,11 @@ import {
   StyledActions,
   StyledActionButton,
   StyledTotal,
-} from './styledcart';
+} from './styledcart'
 
 const Cart = () => {
-  const items = useSelector((state) => state.cart.items);
-  const isOpen = useSelector((state) => state.cart.isOpen);
+  const items = useSelector((state) => state.cart.items)
+  const isOpen = useSelector((state) => state.cart.isOpen)
   const dispatch = useDispatch()
 
   const cartRef = useRef(null)
@@ -45,7 +45,7 @@ const Cart = () => {
 
   const handleQuantityChange = (id, delta) => {
     setQuantity(id, delta);
-  };
+  }
 
   const setQuantity = (id, delta) => {
     const item = items.find(item => item.id === id);
@@ -55,12 +55,12 @@ const Cart = () => {
         dispatch(updateQuantity({ id, quantity: newQuantity }));
       }
     }
-  };
+  }
 
   // Borrar todos los productos del carrito
   const handleClearCart = () => {
-    dispatch(clearCart());
-    dispatch(toggleCart());
+    dispatch(clearCart())
+    dispatch(toggleCart())
 
     // Configuración del Toast para carrito vacío
     const Toast = Swal.mixin({
@@ -70,26 +70,26 @@ const Cart = () => {
       timer: 2000,
       timerProgressBar: true,
       didOpen: (toast) => {
-        toast.onmouseenter = Swal.stopTimer;
-        toast.onmouseleave = Swal.resumeTimer;
+        toast.onmouseenter = Swal.stopTimer
+        toast.onmouseleave = Swal.resumeTimer
       },
-    });
+    })
     // Mostrar el Toast
     Toast.fire({
       icon: 'info',
       title: 'Carrito vacío',
-    });
-  };
+    })
+  }
 
   // Calcular el total del carrito
   const totalPrice = useMemo(() => {
-    return items.reduce((total, item) => total + item.price * item.quantity, 0);
-  }, [items]);
+    return items.reduce((total, item) => total + item.price * item.quantity, 0)
+  }, [items])
 
   // Mostrar modal de éxito al finalizar compra
   const handleFinishPurchase = () => {
-    dispatch(clearCart());
-    dispatch(toggleCart());
+    dispatch(clearCart())
+    dispatch(toggleCart())
 
     // SweetAlert para mostrar el modal de éxito
     Swal.fire({
@@ -98,8 +98,8 @@ const Cart = () => {
       icon: 'success',
       timer: 2000,
       showConfirmButton: false,
-    });
-  };
+    })
+  }
 
   // Cerrar el carrito si se hace clic fuera del componente
   useEffect(() => {
@@ -111,20 +111,20 @@ const Cart = () => {
         cartButtonRef.current && 
         !cartButtonRef.current.contains(e.target)
       ) {
-        dispatch(toggleCart());
+        dispatch(toggleCart())
       }
-    };
+    }
   
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside)
     } else {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside)
     }
   
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isOpen, dispatch]);
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isOpen, dispatch])
 
   console.log(isOpen)
 
@@ -163,7 +163,7 @@ const Cart = () => {
         )}
       </StyledContainer>
     )
-  );
-};
+  )
+}
 
-export default Cart;
+export default Cart

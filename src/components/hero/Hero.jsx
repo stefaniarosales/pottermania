@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import AboutUs from '../aboutus/AboutUs'
 import FeaturedProducts from '../featuredproducts/FeaturedProducts'
 import HarryPotterText from './HarryPotterText'
 //styles
 import { StyledSection, StyledTitle, StyledSubTitle} from '../hero/StyledHero'
-import { StyledButton } from '../ui/button/StyledButton';
+import { StyledButton } from '../ui/button/StyledButton'
 
 function Hero() {
   return (

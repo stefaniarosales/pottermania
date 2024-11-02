@@ -25,8 +25,8 @@ export const StyledItemsList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
-  max-height: 290px; /* Limitar la altura del contenedor */
-  overflow-y: auto;  /* Habilitar el scroll vertical si es necesario */
+  max-height: 250px;
+  overflow-y: auto;  
   border-bottom: 1px solid #dee2e6;
   margin-bottom: 20px;
 `

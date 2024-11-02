@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const StyledContainerNavbar = styled.nav`
   height: 50px;
@@ -63,7 +63,7 @@ export const Styledlinks = styled.div`
     border-bottom: 1px solid red; 
   }
 
-  /* Menú abierto en móvil */
+  /*en móvil */
   &.menu-open {
     display: flex;
     justify-content: flex-start;

@@ -1,5 +1,4 @@
 import React, { useEffect} from 'react'
-
 //styles
 import { 
   StyledContainer,
@@ -8,14 +7,12 @@ import {
   StyledItem, 
   StyledTitle 
 } from './StyledAboutUsPage'
-
 //icons
 import LocalShippingIcon from '@mui/icons-material/LocalShipping'
 import HttpsIcon from '@mui/icons-material/Https'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone'
 
 function AboutUsPage() {
-
   //realiza el scroll hasta la parte superior cuando se carga el componente
   useEffect(() => {
     window.scrollTo(0,0)

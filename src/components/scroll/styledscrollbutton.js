@@ -25,4 +25,4 @@ export const StyledScrollButton = styled.button`
   svg {
     font-size: 30px;
   }
-`;
+`
