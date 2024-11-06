@@ -74,9 +74,18 @@ export const StyledField = styled.input`
   outline: none;
 `
 
-export const TextArea = styled(StyledField)`
+export const TextArea = styled.textarea`
   height: 80px;
-`
+  width: 90%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  resize: none;
+  overflow-y: auto;
+  vertical-align: top;
+`;
 
 export const ErrorText = styled.div`
   font-size: 10px;

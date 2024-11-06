@@ -36,7 +36,7 @@ const ContactFormPage = () => {
             Swal.fire({
               title: 'Enviado con éxito!',
               icon: 'success',
-              timer: 3000, // Tiempo en milisegundos (3 segundos)
+              timer: 3000,
               showConfirmButton: false, // Oculta el botón de confirmar
             });
             resetForm();  // Reiniciar el formulario
