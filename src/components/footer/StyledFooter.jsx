@@ -13,6 +13,7 @@ export const StyledInfo=styled.p`
     font-weight: lighter;
     color: #000000;
     margin: 0;
+    padding: 1px;
 `
 
 export const StyledLogo=styled.img`

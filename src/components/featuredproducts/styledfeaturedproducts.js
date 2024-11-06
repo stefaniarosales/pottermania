@@ -18,7 +18,7 @@ export const StyledProductsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 15px;
   padding: 3rem 8rem;
   @media (max-width: 768px) {
         padding: 0;

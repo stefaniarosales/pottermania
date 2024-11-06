@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <StyledContainer>
         <StyledLogo src='/img/logo/logoFooter.png'/>
-        <StyledInfo>Creado por Stefania</StyledInfo>
+        <StyledInfo>"Desarrollado por Stefania Rosales | Página creada con fines educativos"</StyledInfo>
       </StyledContainer>
     </>
   )
