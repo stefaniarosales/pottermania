@@ -5,7 +5,7 @@
 ## 🖼️ Capturas de pantalla  
  <img src="https://github.com/stefaniarosales/pottermania/blob/main/public/hero-web.png" width="350px"> <img src="https://github.com/stefaniarosales/pottermania/blob/main/public/about-web.png" width="350px"> <img src="https://github.com/stefaniarosales/pottermania/blob/main/public/products-web.png" width="350px"><img src="https://github.com/stefaniarosales/pottermania/blob/main/public/contact-web.png" width="350px">
  
- <img src="https://github.com/stefaniarosales/pottermania/blob/main/public/mobile.png" width="150px">
+ <img src="https://github.com/stefaniarosales/pottermania/blob/main/public/mobile.png" width="150px"> <img src="https://github.com/stefaniarosales/pottermania/blob/main/public/about-mobile.png" width="150px"> <img src="https://github.com/stefaniarosales/pottermania/blob/main/public/products-mobile.png" width="150px"> <img src="https://github.com/stefaniarosales/pottermania/blob/main/public/contact-mobile.png" width="150px">
 
 ## 🚀 Características  
 ✅ Navegación fluida con React Router DOM 🔗  
