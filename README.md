@@ -3,7 +3,9 @@
 **Pottermania** es una aplicación web diseñada para los fanáticos del mundo mágico de Harry Potter. La app permite explorar productos, agregarlos al carrito y realizar compras con una experiencia fluida e intuitiva.  
 
 ## 🖼️ Capturas de pantalla  
-![Vista previa](ruta-de-la-imagen.png)  
+ <img src="https://github.com/stefaniarosales/pottermania/blob/main/public/hero-web.png" width="350px"> <img src="https://github.com/stefaniarosales/pottermania/blob/main/public/about-web.png" width="350px"> <img src="https://github.com/stefaniarosales/pottermania/blob/main/public/products-web.png" width="350px"><img src="https://github.com/stefaniarosales/pottermania/blob/main/public/contact-web.png" width="350px">
+ 
+ <img src="https://github.com/stefaniarosales/pottermania/blob/main/public/mobile.png" width="150px">
 
 ## 🚀 Características  
 ✅ Navegación fluida con React Router DOM 🔗  
